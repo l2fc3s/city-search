@@ -1,0 +1,21 @@
+#totalCities {
+    display: none;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+p{
+    display: inline-block;
+    white-space: pre;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  td {
+      padding: 5px;
+  }
