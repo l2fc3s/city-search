@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 
     
 
-    let button = document.getElementById("submit");
+    // let button = document.getElementById("submit");
     let form = document.getElementById("searchForm");
     
 
@@ -23,11 +23,6 @@ window.addEventListener("load", function(){
             return event.preventDefault();
         } 
 
-        
-        /* 
-        On valid input, an API must be hit:
-https://jsonmock.hackerrank.com/api/cities/?city={input value}
-        */
 
         event.preventDefault();
         totalCities.style.display = "block";
@@ -37,19 +32,6 @@ https://jsonmock.hackerrank.com/api/cities/?city={input value}
                 console.log(json);
 
                 cities.innerHTML = json["data"].length;
-
-
-                /*  
-                Show the cities in tabular format such that all the cities belonging to the same state fall in the same row.
-                First column(vertical) is the state name, then followed by all city names per column
-                eg:
-
-                State: city, city
-                State: city, city etc...
-                */
-
-                //test table
-                // tableData.innerHTML +=
 
                 let table = document.getElementById("tableData");
                 for(let i = 0; i < json.data.length; i++){
@@ -61,18 +43,9 @@ https://jsonmock.hackerrank.com/api/cities/?city={input value}
                     </tr>
                 `
                 }
-
-
             });
         });
-
-        
-        
-
     });
-
-    
-
 });
 
 
